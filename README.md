@@ -1,1 +1,3 @@
-# controle-financeiro
+# ControleFinanceiro
+
+Controle financeiro pessoal.
