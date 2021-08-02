@@ -36,7 +36,7 @@ namespace ControleFinanceiro.Controllers
         /// Adiciona um usuário
         /// </summary>
         [HttpPost]
-        public ActionResult<Usuario> Create(Usuario usuario)
+        public ActionResult<UsuarioSec> Create(UsuarioSec usuario)
         {
             _usuarioService.Create(usuario);
 

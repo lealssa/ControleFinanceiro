@@ -2,6 +2,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using System;
 
 namespace ControleFinanceiro.Models 
 {
@@ -30,12 +31,20 @@ namespace ControleFinanceiro.Models
         [BsonElement("cpf")]
         [Required]
         public string CPF { get; set; }
-        
+
+        [BsonElement("data_nascimento")]
+        [Required]
+        public DateTime DataNascimento { get; set; }        
+    }
+
+    public class UsuarioSec : Usuario
+    {   
         [BsonElement("ativo")]
         public bool Ativo { get; set; } = true;
 
         [BsonElement("senha")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string Senha { get; set; }
+        public string Senha { get; set; }       
+
     }
 }
